@@ -83,7 +83,7 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: '${{ secrets.KUBECONFIG }}'
-      - run: kubectl version --short -o yaml
+#      - run: kubectl version --short -o yaml
 # Below codes are added to complete the task of adding ingress as Github_var and and namespace replicas as repo Environment vars 
       - run: >
           echo "INGRESS_IP=$(kubectl -n ingress-nginx get services
